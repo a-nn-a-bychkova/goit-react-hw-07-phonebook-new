@@ -1,11 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeFilter } from '../../redux/phonebook-actions';
-import { getFilter } from '../../redux/phonebook-selector';
+import { phonebookSelectors, changeFilter } from '../../redux';
 import s from '../styles/Input.module.css';
 
 function Filter() {
-  const value = useSelector(getFilter);
+  const value = useSelector(phonebookSelectors.getFilter);
   const dispatch = useDispatch();
   const onChange = event => dispatch(changeFilter(event.currentTarget.value));
   return (

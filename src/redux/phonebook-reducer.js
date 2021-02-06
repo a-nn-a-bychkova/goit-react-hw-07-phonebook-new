@@ -12,7 +12,6 @@ import {
   fetchContactsSuccess,
   fetchContactsError,
 } from './phonebook-actions';
-import initialContacts from '../initialContacts.json';
 
 const filter = createReducer('', {
   [changeFilter]: (_, action) => action.payload,
