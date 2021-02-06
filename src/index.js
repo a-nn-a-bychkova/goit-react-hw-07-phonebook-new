@@ -6,13 +6,13 @@ import './index.css';
 import App from './components/App';
 import store from './redux/store';
 import reportWebVitals from './reportWebVitals';
+console.log('store', store);
+console.log('store.store', store.store);
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store.store}>
-      <PersistGate loading={null} persistor={store.persistor}>
-        <App />
-      </PersistGate>
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
